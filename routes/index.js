@@ -24,7 +24,7 @@ router.get('/profile', isLoggedIn, function (req, res) {
   res.render('profile')
 })
 
-router.get('/feed', isLoggedIn, function (req, res) {
+router.get('/feed', function (req, res) {
   res.render('feed')
 })
 
@@ -49,7 +49,7 @@ router.post('/login', passport.authenticate('local', {
 }), function (req, res) { })
 
 router.get('/logout', function (req, res) {
-  req.logout(function (err) { 
+  req.logout(function (err) {
     if (err) return next(err);
     res.redirect('/');
   });
