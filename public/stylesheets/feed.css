@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+#navbar #logo-top {
+    width: 30px;
+}
+
+#navbar #nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+#nav-left .pages-navbar {
+    color: black;
+    padding: 15px;
+    border-radius: 23px;
+    margin-right: 5px;
+}
+
+#nav-left .pages-navbar {
+    color: #fff;
+    background-color: #000;
+}
+
+#navbar input {
+    border: none;
+    font-size: 15px;
+}
+
+.custom-icon {
+    color: #5f5f5f;
+}
+
+#search-nav, input {
+    display: flex;
+    align-items: center;
+    background-color: #e9e9e9;
+    padding: 0 15px;
+    width: 65%;
+    border-radius: 25px;
+}
+
+#nav-right button {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    scale: 0.9;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#nav-right button:hover {
+    background-color: #e9e9e9;
+}
+
