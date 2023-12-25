@@ -32,17 +32,22 @@ a {
     margin-right: 15px;
 }
 
+#nav-left a:nth-child(1) {
+    margin-right: 10px;
+}
+
 #nav-left .pages-navbar {
     color: black;
     padding: 15px;
     border-radius: 23px;
-    margin-right: 5px;
+    margin: 0 2px;
 }
 
-#nav-left .pages-navbar {
+#nav-left .active-page {
     color: #fff;
     background-color: #000;
 }
+
 .custom-icon {
     color: #5f5f5f;
 }
@@ -82,6 +87,10 @@ a {
     background-color: #e9e9e9;
     padding: 0px 10px;
     border-radius: 25px;
+}
+
+#navbar #search-nav:hover, #navbar #search-nav:hover > #navbar-search {
+    background-color: #e1e1e1;
 }
 
 #navbar #nav-right #dropDown {
@@ -145,6 +154,64 @@ a {
     margin-bottom: 10px;
 }
 
+#imagecontainer .card .content {
+    position: relative;
+}
+
+#imagecontainer .card .content i {
+    scale: 0.6;
+}
+
+#imagecontainer .card .content .on-hover {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#imagecontainer .card .content button {
+    top: 5%;
+    right: 1%;
+    padding: 15px 20px;
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+}
+
+#imagecontainer .card .content button:hover {
+    background-color: #ad081b;
+}
+
+#imagecontainer .card .content i:nth-child(3) {
+    top: calc(100% - 60px);
+    right: 40px;
+    background-color: #d4d4d4;
+    padding: 12px 15px;
+    border-radius: 50%;
+}
+
+#imagecontainer .card .content i:nth-child(4) {
+    top: calc(100% - 60px);
+    right: 0;
+    background-color: #cfcfcf;
+    padding: 12px 13px;
+    border-radius: 50%;
+}
+
+#imagecontainer .card .content i:hover {
+    background-color: #fff;
+}
+
+#imagecontainer .card:hover > .content img{
+    cursor: zoom-in;
+    filter: brightness(0.6);
+}
+
+#imagecontainer .card:hover >.content * {
+    opacity: 1;
+}
+
 #notification-modal {
     width: 25vw;
     height: 90vh;
@@ -152,8 +219,6 @@ a {
     border: none;
     position: absolute;
     left: calc(100% - 25vw - 10px);
-    /* border: 2px solid black; */
-    /* top: 70px; */
 }
 
 #notification-modal #updates {
@@ -161,6 +226,100 @@ a {
     padding: 30px 0;
 }
 
-#notification-modal #notification-panels {
+#notification-modal #notification-panel {
     height: 500px;
+    padding: 5px;
+    overflow: auto;
+}
+
+#notification-modal #notification-panel .notification {
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#notification-modal #notification-panel .notification:hover {
+    background-color: #d4d4d4;
+}
+
+#notification-modal #notification-panel .notification .notification-title {
+    display: flex;
+}
+
+#notification-modal #notification-panel .notification .notification-title button{
+    scale: 0.6;
+}
+
+#notification-modal #notification-panel .notification .notification-title button:hover {
+    filter: invert(100%);
+}
+
+#notification-modal #notification-panel .notification .notification-content {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#notification-modal #notification-panel .notification .notification-content img {
+    height: 183px;
+}
+
+#search-nav #search-modal {
+    width: 65%;
+    position: absolute;
+    top: 70px;
+    left: 21%;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 10px;
+}
+
+#search-modal #search-block {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    display: flex;
+}
+
+#search-modal #searches {
+    margin-right: 10px;
+    padding: 7px 13px;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    font-family: 'calibri';
+    color: #000;
+}
+
+#search-modal #searches:hover {
+    background-color: #d4d4d4;
+}
+
+#search-modal #card-container {
+    margin-top: 20px;
+    columns: 3;
+}
+
+#search-modal .ideacard {
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#search-modal .ideacard:hover {
+    background-color: #d4d4d4;
+}
+
+#search-modal #card-container .ideacard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+dialog {
+    overflow: hidden;
+    z-index: 99;
 }
