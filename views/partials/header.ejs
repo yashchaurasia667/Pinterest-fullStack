@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="nav-left">
+        <a href="/feed"
+          ><img src="/images/Pinterest-logo.png" id="logo-top" alt=""
+        /></a>
+        <a href="/feed" oncanplay="activePage()" class="pages-navbar">Home</a>
+        <a href="/explore" oncanplay="activePage()" class="pages-navbar"
+          >Explore</a
+        >
+        <a href="/create" oncanplay="activePage()" class="pages-navbar"
+          >Create</a
+        >
+      </div>
+      <div id="search-nav">
+        <i class="fa-solid fa-magnifying-glass custom-icon"></i>
+        <input
+          onclick="showModal(this, '#search-modal')"
+          type="text"
+          placeholder="Search"
+          name="searchQuery"
+          id="navbar-search"
+        />
+        <button id="closeSearch">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+        <dialog id="search-modal">
+          <div id="recent-searches">
+            Recent Searches
+            <div id="search-block">
+              <a href="#" id="searches">
+                ghibli studio sky
+                <i class="fa-solid fa-xmark custom-icon"></i>
+              </a>
+            </div>
+          </div>
+          <div id="ideas-for-you">
+            <p>Ideas for You</p>
+            <div id="card-container">
+              <a class="ideacard">
+                <img src="/images/navbar/search-modal/1.jpeg" alt="" />
+                <p>Vagabond</p>
+              </a>
+            </div>
+          </div>
+        </dialog>
+      </div>
+      <div id="nav-right">
+        <button onclick="showModal(this, '#notification-modal')">
+          <i class="fa-solid fa-2x fa-bell custom-icon"></i>
+        </button>
+        <button>
+          <i class="fa-solid fa-2x fa-comment-dots custom-icon"></i>
+        </button>
+        <dialog id="notification-modal">
+          <div id="updates">Updates</div>
+          <div id="notification-panel">
+            <div class="notification">
+              <div class="notification-title">
+                Naruto, Dragon Ball, and more Pins popular on Pinterest
+                <button>
+                  <i class="fa-solid fa-2x on-hover fa-ellipsis"></i>
+                </button>
+              </div>
+              <div class="notification-content">
+                <img src="/images/navbar/notification-modal/1.jpg" alt="" />
+                <img src="/images/navbar/notification-modal/2.jpg" alt="" />
+                <img src="/images/navbar/notification-modal/3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </dialog>
+        <a href="/profile">
+          <img src="/images/default-profile.png" alt="" />
+        </a>
+        <button id="dropDown">
+          <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

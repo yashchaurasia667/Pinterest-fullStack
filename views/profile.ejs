@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/pofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/images/Pinterest-logo.png" type="image/x-icon">
     <title>Profile</title>
 </head>
 <body>
-    <h1>Profile</h1>
+    <% include partials/header.ejs %>
+    <div id="main">
+        <img id="pfp" src="/images/default-profile.png" alt="Profile Image">
+        <p id="name">Yash Chaurasia</p>
+        <p id="following">0 following</p>
+        <div id="buttons">
+            <button id="share">Share</button>
+            <button id="edit-profile">Edit profile</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/global.js"></script>
+    <script src="/javascripts/profile.js"></script>
 </body>
 </html>

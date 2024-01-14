@@ -20,7 +20,7 @@ router.get('/login', function (req, res) {
   res.render('login');
 });
 
-router.get('/profile', isLoggedIn, function (req, res) {
+router.get('/profile', function (req, res) {
   res.render('profile')
 })
 
